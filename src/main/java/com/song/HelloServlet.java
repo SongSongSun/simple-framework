@@ -1,4 +1,8 @@
-package com.song.servlet;
+package com.song;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import sun.rmi.runtime.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,11 +18,13 @@ import java.io.IOException;
  */
 @WebServlet("/hello")
 public class HelloServlet extends HttpServlet {
+    private Logger log = LoggerFactory.getLogger(HelloServlet.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = "我的简易框架";
         req.setAttribute("name", name);
+        log.info("name is " + name);
         req.getRequestDispatcher("WEB-INF/hello.jsp").forward(req, resp);
     }
 }
