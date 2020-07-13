@@ -3,6 +3,7 @@ package com.song.controller.shopadmin;
 import com.song.entity.bo.HeadLine;
 import com.song.entity.dto.Result;
 import com.song.service.solo.HeadLineService;
+import org.simpleframework.core.annotation.Controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,6 +15,7 @@ import java.util.List;
  * @Version 1.0
  * @Description
  */
+@Controller
 public class HeadLineOperationController {
     private HeadLineService headLineService;
 

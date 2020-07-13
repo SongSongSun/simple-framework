@@ -3,6 +3,7 @@ package com.song.service.solo.impl;
 import com.song.entity.bo.HeadLine;
 import com.song.entity.dto.Result;
 import com.song.service.solo.HeadLineService;
+import org.simpleframework.core.annotation.Service;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
  * @Version 1.0
  * @Description
  */
+@Service
 public class HeadLineServiceImpl implements HeadLineService {
     @Override
     public Result<Boolean> addHeadLine(HeadLine headLine) {

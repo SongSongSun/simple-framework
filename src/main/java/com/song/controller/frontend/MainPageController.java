@@ -3,6 +3,7 @@ package com.song.controller.frontend;
 import com.song.entity.dto.MainPageInfoDTO;
 import com.song.entity.dto.Result;
 import com.song.service.combine.HeadLineShopCategoryCombineService;
+import org.simpleframework.core.annotation.Controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  * @Version 1.0
  * @Description
  */
+@Controller
 public class MainPageController {
     private HeadLineShopCategoryCombineService headLineShopCategoryCombineService;
 
